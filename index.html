@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="jv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payung Ireng ing Pasar Wage — Majalah Cerita</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Magazine-like styles */
+    body{background:#f7f6f3;color:#222;font-family:Georgia, 'Times New Roman', serif}
+    .hero{background:linear-gradient(180deg, #11182722, #ffffff00);padding:3rem 1rem;border-bottom:1px solid #e6e2de}
+    .title{font-family: 'Georgia', serif;font-size:2.2rem;letter-spacing:0.4px}
+    .byline{color:#6b6b6b;font-style:italic}
+    .article p{line-height:1.9;font-size:1.05rem;margin-bottom:1rem}
+    .poster{width:100%;height:320px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#0f172a,#1e293b);color:#fff}
+    .poster svg{max-height:260px}
+    .card.mag{border:none;background:transparent}
+    .sidebar .card{background:#fff}
+    .save-list{max-height:240px;overflow:auto}
+    footer{padding:2rem 0;color:#6b6b6b}
+    @media(min-width:992px){.title{font-size:3rem}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h1 class="title">Payung Ireng ing Pasar Wage</h1>
+          <div class="byline">Crita cekak basa Jawa • Majalah Sekolah</div>
+        </div>
+        <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+          <small class="text-muted">Proyek: Halaman web + Penyimpanan prilaku remaja</small>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container my-4">
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <article class="card mag p-4">
+          <div class="poster mb-3 rounded-3">
+            <!-- Simple illustrative SVG poster (payung ireng) -->
+            <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Poster payung ireng">
+              <defs>
+                <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.9"/>
+                  <stop offset="100%" stop-color="#6366f1" stop-opacity="0.9"/>
+                </linearGradient>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#g)" rx="12"/>
+              <g transform="translate(40,40)">
+                <ellipse cx="260" cy="260" rx="200" ry="14" fill="#000" opacity="0.2"/>
+                <path d="M120 180 C180 80, 340 80, 400 180" fill="#000000" opacity="0.95"/>
+                <rect x="286" y="180" width="8" height="130" rx="4" fill="#fff" opacity="0.9"/>
+                <path d="M290 310 C290 330, 250 330, 250 310" fill="#fff" opacity="0.9"/>
+                <text x="20" y="30" fill="#fff" font-family="Georgia, serif" font-size="26">Payung Ireng</text>
+                <text x="20" y="56" fill="#fff" font-family="Georgia, serif" font-size="14">Cerita: Ratri lan Kabecikan</text>
+              </g>
+            </svg>
+          </div>
+
+          <section class="article">
+            <p>Ing sawijining esuk Pasar Wage ing desa Tanen rame banget. Wong-wong padha adol lan tumbas, swara tawar-menawar muni bolak-balik kaya geger klasa.</p>
+
+            <p>Saka kadohan katon seorang bocah jenenge Ratri, ngasta kranjang cilik isi sayur kang diklumpukake saka pekarangan omahé. Dheweke arep didol supaya bisa nambah sangu sekolah.</p>
+
+            <p>Nalika mlaku nyedhaki kios jajan, dumadakan udan deres tiba. Wong-wong pada mlayu golek pangayoman. Ratri sing ora nggawa payung mung bisa ngiyup ing ngisor tarub anyaman.</p>
+
+            <p>Ora let suwe, ana simbah-simbah nggawa payung ireng gedhé nyedhaki dheweke.<br>
+            “Sinten jenengmu, nduk?” pitakoné simbah mau kanthi swara alus.<br>
+            “Ratri, mbah.”<br>
+            “Sok, nganggo wae payung iki. Panjenengan dhewe ora bakal teles.”</p>
+
+            <p>Ratri sepisanan ora gelem amarga ora ngerti sapa simbah iku. Nanging simbah mau mesem lan kandha, “Nek kowe nulungi wong liya, Gusti mesthi paring dalan.”</p>
+
+            <p>Amarga krasa trenyuh, Ratri nampa payung iku lan ngucap matur nuwun. Nalika arep mbalikke, simbah mau wis ora katon meneh—ilang kaya angin sing liwat.</p>
+
+            <p>Saka dina kuwi, Ratri tansah eling yen kabecikan ora kudu gedhé. Kadhang mung payung ireng sederhana, nanging bisa ngganti dina sing peteng dadi luwih cerah.</p>
+          </section>
+
+          <hr>
+          <p class="mb-0"><small class="text-muted">Katerangan: Crita iki ditulis ing basa Jawa. Gunakake kaca iki minangka latihan desain majalah lan fitur penyimpanan data prilaku remaja. Data sing disimpen mung ana ing piranti pangguna (localStorage) lan ora dikirim menyang server.</small></p>
+        </article>
+      </div>
+
+      <aside class="col-lg-4 sidebar">
+        <div class="card p-3 mb-3">
+          <h5>Catatan Prilaku Remaja</h5>
+          <p class="small text-muted">Isi catetan kanggo nyimpen prilaku/pangeling remaja (disimpen ing piranti).</p>
+          <form id="noteForm">
+            <div class="mb-2">
+              <input id="name" class="form-control form-control-sm" placeholder="Asma" required>
+            </div>
+            <div class="mb-2">
+              <input id="age" type="number" class="form-control form-control-sm" placeholder="Umur" min="6">
+            </div>
+            <div class="mb-2">
+              <select id="behavior" class="form-select form-select-sm">
+                <option value="Becik">Becik</option>
+                <option value="Biasa">Biasa</option>
+                <option value="Ngganggu">Ngganggu</option>
+              </select>
+            </div>
+            <div class="mb-2">
+              <textarea id="notes" class="form-control form-control-sm" rows="3" placeholder="Catatan (apa sing kelakon)"></textarea>
+            </div>
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary btn-sm" type="submit">Simpan</button>
+              <button id="exportBtn" type="button" class="btn btn-outline-secondary btn-sm">Export JSON</button>
+              <button id="clearBtn" type="button" class="btn btn-outline-danger btn-sm">Busak Kabeh</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card p-3">
+          <h6>Daftar Catatan</h6>
+          <div id="entries" class="save-list list-group mt-2"></div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <small>Hak Cipta • Proyek Sekolah — Sampeyan bisa ngunggah file iki menyang GitHub lan nggunakake GitHub Pages kanggo nampilake.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple localStorage-based note system
+    const LS_KEY = 'prilaku_remaja_entries_v1';
+    const form = document.getElementById('noteForm');
+    const entriesEl = document.getElementById('entries');
+    const exportBtn = document.getElementById('exportBtn');
+    const clearBtn = document.getElementById('clearBtn');
+
+    function loadEntries(){
+      const raw = localStorage.getItem(LS_KEY); 
+      return raw ? JSON.parse(raw) : [];
+    }
+    function saveEntries(arr){ localStorage.setItem(LS_KEY, JSON.stringify(arr)); render(); }
+    function render(){
+      const arr = loadEntries();
+      entriesEl.innerHTML = '';
+      if(arr.length === 0){ entriesEl.innerHTML = '<div class="text-muted small">Durung ana catetan.</div>'; return }
+      arr.slice().reverse().forEach((e, i) =>{
+        const item = document.createElement('div');
+        item.className = 'list-group-item';
+        item.innerHTML = `<div class="d-flex w-100 justify-content-between"><strong>${e.name}</strong><small>${e.date}</small></div><div class="small text-muted">Umur: ${e.age} • Prilaku: ${e.behavior}</div><div class="mt-2">${e.notes || ''}</div><div class="mt-2 text-end"><button data-index="${arr.length - 1 - i}" class="btn btn-sm btn-outline-danger btn-delete">Busak</button></div>`;
+        entriesEl.appendChild(item);
+      });
+      // attach delete handlers
+      document.querySelectorAll('.btn-delete').forEach(btn=>btn.addEventListener('click', e=>{
+        const idx = Number(btn.getAttribute('data-index'));
+        const a = loadEntries(); a.splice(idx,1); saveEntries(a);
+      }));
+    }
+
+    form.addEventListener('submit', (ev)=>{
+      ev.preventDefault();
+      const entry = {
+        name: document.getElementById('name').value.trim(),
+        age: document.getElementById('age').value.trim(),
+        behavior: document.getElementById('behavior').value,
+        notes: document.getElementById('notes').value.trim(),
+        date: new Date().toLocaleString()
+      };
+      const a = loadEntries(); a.push(entry); saveEntries(a);
+      form.reset();
+    });
+
+    exportBtn.addEventListener('click', ()=>{
+      const a = loadEntries();
+      const blob = new Blob([JSON.stringify(a, null, 2)], {type:'application/json'});
+      const url = URL.createObjectURL(blob);
+      const aEl = document.createElement('a');
+      aEl.href = url; aEl.download = 'catatan_prilaku_remaja.json'; aEl.click(); URL.revokeObjectURL(url);
+    });
+
+    clearBtn.addEventListener('click', ()=>{
+      if(confirm('Busak kabeh catetan?')){ localStorage.removeItem(LS_KEY); render(); }
+    });
+
+    // initial render
+    render();
+  </script>
+</body>
+</html>
+
